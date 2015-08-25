@@ -101,11 +101,16 @@ public class CityConnect {
 		showMsgToUser(WELCOME_MESSAGE);
 		while (true) {
 			showMsgToUser("Enter command:");
-			String command = scanner.nextLine();
-			String userCommand = command;
+			String userCommand = getUserCommand();
 			String feedback = executeCommand(userCommand);
 			showMsgToUser(feedback);
 		}
+	}
+
+	private static String getUserCommand() {
+		String command = scanner.nextLine();
+		String userCommand = command;
+		return userCommand;
 	}
 
 	/*
